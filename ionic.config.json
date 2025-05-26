@@ -1,0 +1,7 @@
+{
+  "name": "appiti",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
