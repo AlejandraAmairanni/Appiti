@@ -1,2 +1,39 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+
+:root {
+--ion-color-rose: #e91e63;
+--ion-color-rose-rgb: 233,30,99;
+--ion-color-rose-contrast: #ffffff;
+--ion-color-rose-contrast-rgb: 255,255,255;
+--ion-color-rose-shade: #d11b59;
+--ion-color-rose-tint: #ec407a;
+
+--ion-color-mora: #9c27b0;
+--ion-color-mora-rgb: 156,39,176;
+--ion-color-mora-contrast: #ffffff;
+--ion-color-mora-contrast-rgb: 255,255,255;
+--ion-color-mora-shade: #8722a0;
+--ion-color-mora-tint: #a94fbc;
+
+
+}
+
+.ion-color-rose {
+    --ion-color-base: var(--ion-color-rose) !important;
+    --ion-color-base-rgb: var(--ion-color-rose-rgb) !important;
+    --ion-color-contrast: var(--ion-color-rose-contrast) !important;
+    --ion-color-contrast-rgb: var(var(--ion-color-rose-contrast-rgb) !important);
+    --ion-color-shade: var(--ion-color-rose-shade) !important;
+    --ion-color-tint: var(--ion-color-rose-tint) !important;
+}
+
+.ion-color-mora {
+    --ion-color-base: var(--ion-color-mora) !important;
+    --ion-color-base-rgb: var(--ion-color-mora-rgb) !important;
+    --ion-color-contrast: var(--ion-color-mora-contrast) !important;
+    --ion-color-contrast-rgb: var(var(--ion-color-mora-contrast-rgb) !important);
+    --ion-color-shade: var(--ion-color-mora-shade) !important;
+    --ion-color-tint: var(--ion-color-mora-tint) !important;
+}

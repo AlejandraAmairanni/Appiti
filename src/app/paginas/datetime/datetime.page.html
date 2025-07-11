@@ -1,0 +1,18 @@
+<app-header [titulo]="'DateTime'"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-datetime-button datetime="datetime" (click)="date()"></ion-datetime-button>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime
+        id="datetime"
+        presentation="date"
+        color="primary"
+        (ionChange)="getDate($event)">
+      </ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>pop over</ion-title>
+    <ion-buttons slot="start"  >
+      <ion-back-button defaultHref="/" slot="start" text="regresar" color="tertiary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="click-trigger">izquierdo</ion-button>
+<ion-popover trigger="click-trigger" triggerAction="click">
+  <ng-template>
+    <ion-content class="ion-padding">hola</ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-button id="context-menu-trigger">derecho</ion-button>
+<ion-popover trigger="context-menu-trigger" triggerAction="context-menu">
+  <ng-template>
+    <ion-content class="ion-padding">A trigger for an inline ion-popover is the element that will open a popover when interacted with. The interaction behavior can be customized by setting the trigger-action property. Note that trigger-action="context-menu" will prevent your system's default context menu from opening.</ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-button id="hover-trigger">Hover</ion-button>
+<ion-popover trigger="hover-trigger" triggerAction="hover">
+  <ng-template>
+    <ion-content class="ion-padding">fer y ama</ion-content>
+  </ng-template>
+</ion-popover>
+</ion-content>

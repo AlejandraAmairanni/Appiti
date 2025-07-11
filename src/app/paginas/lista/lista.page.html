@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>lista</ion-title>
+    <ion-buttons slot="start"  >
+      <ion-back-button defaultHref="/" slot="start" text="regresar" color="tertiary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="none">
+    <ion-item *ngFor="let persona of Elementos">
+      <ion-avatar slot="start">
+        <img [src]="persona.image" alt="foto de {{persona.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ persona.name }}</h2> 
+        <p>{{ persona.phone }}</p>
+        <p>{{ persona.email }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

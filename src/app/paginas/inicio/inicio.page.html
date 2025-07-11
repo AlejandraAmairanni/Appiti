@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button routerLink="/alert">Alert</ion-button>
+  <ion-button routerLink="/card">card</ion-button>
+  <ion-button routerLink="/checkbox">checkbox</ion-button>
+  <ion-button routerLink="/fab">fab</ion-button>
+  <ion-button routerLink="/chip">chip</ion-button>
+  <ion-button routerLink="/grid">grid</ion-button>
+  <ion-button routerLink="/infinity">infinity</ion-button>
+  <ion-button routerLink="/input">input</ion-button>
+  <ion-button routerLink="/popover">pop over</ion-button>
+  <ion-button routerLink="/modal">modal</ion-button>
+  <ion-button routerLink="/lista">lista</ion-button>
+
+<ion-list>
+    <ion-item *ngFor="let e of Elementos" [routerLink]="e.redirectTo" detail>
+      <ion-icon [name]="e.icon" color="tertiary" slot="start"></ion-icon>{{e.name}}</ion-item>
+</ion-list>
+
+</ion-content>
