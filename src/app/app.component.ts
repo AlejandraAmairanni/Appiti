@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotificacionService } from './services/notificacion.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
   standalone: false,
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  private notificationService: NotificacionService = inject 
+  (NotificacionService)
+  ngOnInit(): void{
+    throw new Error('Method no implemented.');
+  }
   constructor() {}
 }

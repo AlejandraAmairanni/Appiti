@@ -11,15 +11,36 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, IonicModule,RouterModule, FormsModule],
 })
 export class InputPage implements OnInit {
-  nombre: string = 'Alejandra Amairanni';
-  apellidos: string = 'Vázquez Abundiz';
-  edad: string = '22';
-  fechaNacimiento: string = '2002-11-21'; 
-
+   alumnos = [
+    {
+      nombre: 'Amairanni ',
+      apellidopaterno: 'Vázquez',
+      apellidomaterno: 'Abundiz',
+      matricula: '202000056',
+      fechaNacimiento: '2002-11-21'
+    },
+  ];
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  calcularEdad(fechaNacimiento: string): number {
+    if (!fechaNacimiento) return 0;
+    const hoy = new Date();
+    const fechaNac = new Date(fechaNacimiento);
+    let edad = hoy.getFullYear() - fechaNac.getFullYear();
+    const mes = hoy.getMonth() - fechaNac.getMonth();
+    if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+      edad--;
+    }
+    return edad;
   }
+
+  get edad() {
+    return this.calcularEdad(this.alumnos[0].fechaNacimiento);
+  }
+
+
 
 }

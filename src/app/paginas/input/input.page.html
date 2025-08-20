@@ -1,37 +1,67 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>input</ion-title>
-    <ion-buttons slot="start"  >
-      <ion-back-button defaultHref="/" slot="start" text="regresar" color="tertiary"></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" slot="start" text="regresar" color="primary"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
   <ion-list>
     <ion-item>
-      <ion-input label="Nombre" [(ngModel)]="nombre"></ion-input>
+      <ion-input
+        label="Nombre:"
+        [(ngModel)]="alumnos[0].nombre"
+        placeholder="Nombre del alumno"
+        readonly>
+      </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input label="Apellidos" [(ngModel)]="apellidos"></ion-input>
+      <ion-input
+        label="Apellido Paterno:"
+        [(ngModel)]="alumnos[0].apellidopaterno"
+        placeholder="Apellido paterno"
+        readonly>
+      </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input label="Edad" [(ngModel)]="edad"></ion-input>
+      <ion-input
+        label="Apellido Materno:"
+        [(ngModel)]="alumnos[0].apellidomaterno"
+        placeholder="Apellido materno"
+        readonly>
+      </ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Fecha de nacimiento</ion-label>
-      <ion-datetime-button datetime="fechaNac"></ion-datetime-button>
+      <ion-input
+        label="Matrícula:"
+        [(ngModel)]="alumnos[0].matricula"
+        placeholder="Matrícula del alumno"
+        readonly>
+      </ion-input>
     </ion-item>
-
-    <ion-modal trigger="fechaNac"></ion-modal>
-    <ion-datetime
-      id="fechaNac"
-      presentation="date"
-      [(ngModel)]="fechaNacimiento"
-    ></ion-datetime>
-
   </ion-list>
+
+  <ion-item>
+    <ion-input
+      label="Fecha de nacimiento:"
+      type="date"
+      [(ngModel)]="alumnos[0].fechaNacimiento">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-input
+        label="Edad:"
+        [value]="edad"
+        type="number"
+        readonly>
+      </ion-input>
+    </ion-item>
+
 </ion-content>

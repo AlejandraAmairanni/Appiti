@@ -35,7 +35,7 @@ export class ListaPage implements OnInit {
     name: 'Juan Raúl Leal Treviño',
     image: 'assets/fotos/juan.jpg',
     phone: '8971235789',
-    email: 'vayven@gmail.com'
+    email: 'hotcake@gmail.com'
     },
     {
     name: 'Josué Jahaziel Carballo Garcia',
@@ -53,7 +53,7 @@ export class ListaPage implements OnInit {
     name: 'Edxel Yahir Villarreal López',
     image: 'assets/fotos/edxel.jpg',
     phone: '8971235789',
-    email: 'fortnite@gmail.com'
+    email: 'jihyo@gmail.com'
     },
     {
     name: 'Pimienta el lomito',
