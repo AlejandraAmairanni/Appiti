@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { NotificacionService } from './services/notificacion.service';
 
 @Component({
@@ -8,10 +8,11 @@ import { NotificacionService } from './services/notificacion.service';
   standalone: false,
 })
 export class AppComponent implements OnInit {
-  private notificationService: NotificacionService = inject 
-  (NotificacionService)
-  ngOnInit(): void{
-    throw new Error('Method no implemented.');
+  private notificationService: NotificacionService = inject(NotificacionService);
+  
+  async ngOnInit(): Promise<void> {
+    await this.notificationService.init();
   }
+  
   constructor() {}
 }

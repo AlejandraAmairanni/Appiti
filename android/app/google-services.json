@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1096558450687",
+    "project_id": "amairany-d0c8b",
+    "storage_bucket": "amairany-d0c8b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096558450687:android:d3063782a0de74e5cf39ca",
+        "android_client_info": {
+          "package_name": "app.iti.ami"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaoDyaY41Qtljv3AQe9mfhFNOwjU--aFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

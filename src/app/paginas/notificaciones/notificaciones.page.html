@@ -1,13 +1,88 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>notificaciones</ion-title>
+    <ion-title>Notificaciones Push</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">notificaciones</ion-title>
+      <ion-title size="large">Notificaciones Push</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="ion-padding">
+    <form #notificationForm="ngForm" (ngSubmit)="enviarNotificacion()">
+      
+      <!-- Título -->
+      <ion-item>
+        <ion-label position="stacked">Título *</ion-label>
+        <ion-input 
+          [(ngModel)]="notificacion.titulo" 
+          name="titulo"
+          placeholder="Ingresa el título de la notificación"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <!-- Mensaje -->
+      <ion-item>
+        <ion-label position="stacked">Mensaje *</ion-label>
+        <ion-textarea 
+          [(ngModel)]="notificacion.mensaje" 
+          name="mensaje"
+          placeholder="Escribe el mensaje de la notificación"
+          rows="4"
+          required>
+        </ion-textarea>
+      </ion-item>
+
+      <!-- URL -->
+      <ion-item>
+        <ion-label position="stacked">URL (Opcional)</ion-label>
+        <ion-input 
+          [(ngModel)]="notificacion.url" 
+          name="url"
+          placeholder="https://ejemplo.com"
+          type="url">
+        </ion-input>
+      </ion-item>
+
+      <!-- Fecha de envío -->
+      <ion-item>
+        <ion-label position="stacked">Fecha de Envío</ion-label>
+        <ion-datetime 
+          [(ngModel)]="notificacion.fechaEnvio" 
+          name="fechaEnvio"
+          display-format="DD/MM/YYYY HH:mm"
+          picker-format="DD/MM/YYYY HH:mm"
+          placeholder="Selecciona fecha y hora">
+        </ion-datetime>
+      </ion-item>
+
+      <!-- Botón de envío -->
+      <ion-button 
+        expand="block" 
+        type="submit" 
+        [disabled]="!notificationForm.form.valid || enviando"
+        class="ion-margin-top">
+        <ion-icon name="send" slot="start"></ion-icon>
+        {{ enviando ? 'Enviando...' : 'Enviar Notificación' }}
+      </ion-button>
+
+    </form>
+
+    <!-- Estado del envío -->
+    <ion-card *ngIf="mensajeEstado" class="ion-margin-top">
+      <ion-card-content>
+        <ion-text [color]="tipoEstado">
+          <p>{{ mensajeEstado }}</p>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>

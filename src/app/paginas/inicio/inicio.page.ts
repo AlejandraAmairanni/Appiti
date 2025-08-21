@@ -79,7 +79,11 @@ export class InicioPage implements OnInit {
       name: 'List',
       redirectTo: '/lista',
       icon: 'list-outline'
-    },
+    },{
+      name: 'Notificaciones',
+      redirectTo: '/notificaciones',
+      icon: 'notifications-outline'
+    }
   
   ];
 
